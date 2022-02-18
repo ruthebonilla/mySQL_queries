@@ -1,0 +1,41 @@
+1.
+INSERT INTO dojos (name, created_at, updated_at) 
+VALUES('Kaycee',NOW(), NOW());
+SELECT * FROM dojos
+
+2.
+DELETE FROM dojo WHERE id<4;
+
+
+3.
+INSERT INTO dojos (name, created_at, updated_at) 
+VALUES('dojo3',NOW(), NOW());
+SELECT * FROM dojos 
+
+
+4.
+INSERT INTO ninjas(id, first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES (6, 'David', 'B', 22, now(), now(), 1);
+SELECT * FROM ninjas
+
+5.
+INSERT INTO ninjas(id, first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES (9, 'Samantha', 'H', 21, now(), now(), 2);
+SELECT * FROM ninjas
+
+6.
+INSERT INTO ninjas(id, first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES (12, 'Jill', 'C', 33, now(), now(), 3);
+SELECT * FROM ninjas
+
+7.
+SELECT * from ninjas join dojos
+WHERE ninjas.dojo_id = dojos.id and dojos.id = 1;
+
+8.
+SELECT * from ninjas join dojos
+WHERE ninjas.dojo_id = dojos.id and dojos.id = 3;
+
+9
+select * from ninjas
+order by id desc limit 1
